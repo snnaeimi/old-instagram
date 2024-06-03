@@ -1,0 +1,99 @@
+.roboto-light {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.roboto-bold {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+body{
+    margin: 0 auto;
+    padding: 0;
+    width: 375px;
+    /* border: 1px solid black; */
+}
+
+.header-container,
+.post-section,
+.user-profile-spec,
+.post-description{
+    display: flex;
+}
+
+.header-container{
+    justify-content: space-between;
+    border-bottom: 1px solid #C6C6C6;
+}
+
+.logo{
+    width: 127px;
+    /* height: 34px; */
+    margin-left: 15px;
+}
+
+.user-avatar{
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    margin: 15px;
+}
+
+.image-post{
+    width: 375px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+
+.like-comment-dm-container img{
+    width: 22px;
+    margin-right: 7px;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+.like-comment-dm-container img:hover{
+    box-shadow: 2px 2px;
+}
+
+.user-name-desc{
+    margin-top: 17px;
+}
+
+.user-name-desc h3,
+.user-name-desc p{
+    /* padding: 0; */
+    margin: 0;
+    font-family: "Roboto";
+    font-size: 13px;
+    
+}
+
+.bottom-container{
+    width: 346px;
+    margin: 20px 10px;
+}
+
+.bottom-section p{
+    flex-direction: column;
+    margin: 8px 3px 10px;
+    font-family: "Roboto";
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.post-description h3,
+.post-description p{
+    font-family: "Roboto";
+    margin-top: 0;
+    margin-right: 5px;
+    font-size: 13px;
+}
+
+.post-description p{
+    font-weight: 300;
+}
