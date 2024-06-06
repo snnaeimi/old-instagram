@@ -20,29 +20,57 @@ const posts = [
   },
 ];
 
-const userID = document.getElementById("user-section");
-const imgPostID = document.getElementById("image-post-id");
+const mainContainerEl = document.getElementById("main-container");
 
 for (let i = 0; i < posts.length; i++) {
   let fullcontent = posts[i];
-  userID.innerHTML += `
-  <div class="user-profile-spec">
-  <img
-    class="user-avatar"
-    id="avatarID"
-    src="${fullcontent.avatar}"
-    
-  />
-  <div class="user-name-desc">
-    <h3>${fullcontent.name}</h3>
-    <p>${fullcontent.location}</p>
-  </div>
-</div>`;
+  mainContainerEl.innerHTML += `
+    <section id="user-section">
+      <div class="user-profile-spec">
+        <img
+          class="user-avatar"
+          id="avatarID"
+          src="${fullcontent.avatar}"
+          alt="a avatar of ${fullcontent.name}"
+        />
+        <div class="user-name-desc">
+          <h3>${fullcontent.name}</h3>
+          <p>${fullcontent.location}</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="image-section" id="image-post-id">
+      <img
+        class="image-post"
+        src="${fullcontent.post}"
+        alt="a paint image of ${fullcontent.name}"
+      />
+    </section>
+
+    <section class="bottom-section">
+        <div class="like-comment-dm-container">
+          <img
+            class="like-icon"
+            src="images/icon-heart.png"
+            alt="Like image which is a empty heart and when you clicking on it, it will fully red"
+          />
+          <img
+            class="comment-icon"
+            src="images/icon-comment.png"
+            alt="an icon of comment"
+          />
+          <img class="dm-icon" src="images/icon-dm.png" alt="an icon of dm" />
+        </div>
+        <p>${fullcontent.likes} likes</p>
+
+        <div class="post-description">
+          <h3>${fullcontent.username}</h3>
+          <p>${fullcontent.comment}</p>
+        </div>
+      </div>
+    </section>
+`;
 }
 
-for (let i = 0; i < posts.length; i++) {
-  imgPostID.innerHTML += `<img
-class="image-post"
-src="${posts[i].post}"
-/>`;
-}
+
